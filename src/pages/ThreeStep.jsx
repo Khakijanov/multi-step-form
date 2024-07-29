@@ -67,7 +67,7 @@ function ThreeStep() {
           <Link to={'/threestep'} className="absolute bottom-0 right-0 bg-denim px-3 py-4 text-white font-bold rounded-lg" type="submit">
             Next Page
           </Link>
-          <Link to={'/'} className="absolute bottom-0 left-0 bg-gray-400 px-3 py-4 text-gray-800 font-bold rounded-lg">
+          <Link to={'/secondstep'} className="absolute bottom-0 left-0 bg-gray-400 px-3 py-4 text-gray-800 font-bold rounded-lg">
             Go Back
           </Link>
         </div>
