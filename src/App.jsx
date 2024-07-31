@@ -1,55 +1,55 @@
-
-import './App.css'
+import "./App.css";
 // rrd
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // layout
-import MainLayout from './layouts/MainLayout'
+import MainLayout from "./layouts/MainLayout";
 // page
-import FirstStep from './pages/FirstStep'
-import SecondStep from './pages/SecondStep'
-import ThreeStep from './pages/ThreeStep'
-import FourthStep from './pages/FourthStep'
+import FirstStep from "./pages/FirstStep";
+import SecondStep from "./pages/SecondStep";
+import ThreeStep from "./pages/ThreeStep";
+import FourthStep from "./pages/FourthStep";
+import FiveStep from "./pages/FiveStep";
 
 // action
-import { action as FirstAction } from './pages/FirstStep' 
+import { action as FirstAction } from "./pages/FirstStep";
 
 function App() {
-  
-
   const routes = createBrowserRouter([
     {
-      path:'/',
-      element: <MainLayout/>,
+      path: "/",
+      element: <MainLayout />,
       // errorElement:
-      children:[
+      children: [
         {
-          index:true,
-          element:<FirstStep/>,
+          index: true,
+          element: <FirstStep />,
           action: FirstAction,
-
         },
         {
-          path:'/secondstep',
-          element:<SecondStep/>
+          path: "/secondstep",
+          element: <SecondStep />,
         },
         {
-          path:'/threestep',
-          element:<ThreeStep/>
+          path: "/threestep",
+          element: <ThreeStep />,
         },
         {
-          path:'/fourthstep',
-          element:<FourthStep/>
+          path: "/fourthstep",
+          element: <FourthStep />,
         },
-      ]
-
-    }
-  ])
+        {
+          path: "/fivestep",
+          element: <FiveStep />,
+        },
+      ],
+    },
+  ]);
 
   return (
     <>
-     <RouterProvider router={routes}/>
+      <RouterProvider router={routes} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
